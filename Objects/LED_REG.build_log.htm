@@ -1,0 +1,72 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.15
+Copyright (C) 2015 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information:  ,  , LIC=JDA01-CBR9N-MS3YP-M3RMJ-LU2XW-B1425
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.15.0
+Toolchain Path:  D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.05 update 2 (build 169)
+Assembler:       Armasm.exe V5.05 update 2 (build 169)
+Linker/Locator:  ArmLink.exe V5.05 update 2 (build 169)
+Library Manager: ArmAr.exe V5.05 update 2 (build 169)
+Hex Converter:   FromElf.exe V5.05 update 2 (build 169)
+CPU DLL:         SARMCM3.DLL V5.15.0
+Dialog DLL:      DCM.DLL V1.13.2.0
+Target DLL:      CMSIS_AGDI.dll V1.21.12.0
+Dialog DLL:      TCM.DLL V1.14.5.0
+ 
+<h2>Project:</h2>
+D:\MyPrj\S_STM32\Myprj\F429\LED\LED_REG.uvprojx
+Project File Date:  06/14/2016
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.05 update 2 (build 169)', folder: 'D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin'
+Rebuild target 'Target 1'
+compiling main.c...
+main.c(4): warning:  #47-D: incompatible redefinition of macro "PERIPH_BASE" (declared at line 1060 of "D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.6.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f429xx.h")
+  #define PERIPH_BASE           ((unsigned int)0x40000000)                          
+main.c: 1 warning, 0 errors
+assembling startup_stm32f429xx.s...
+compiling system_stm32f4xx.c...
+linking...
+Program Size: Code=344 RO-data=444 RW-data=0 ZI-data=1024  
+FromELF: creating hex file...
+".\Objects\LED_REG.axf" - 0 Error(s), 1 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.4.3.0.pack
+                ARM::CMSIS:CORE:4.1.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 4.1.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.6.0.pack
+                Keil::Device:Startup:2.4.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 2.4.0
+
+<h2>Collection of Component include folders:</h2>
+  D:\MyPrj\S_STM32\Myprj\F429\LED\RTE
+  D:\Program Files (x86)\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include
+  D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.6.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:4.1.0
+
+   * Component: Keil::Device:Startup:2.4.0
+      Source file:   MDK\Device\Source\ARM\STM32F42xxx_43xxx_OPT.s
+      Source file:   MDK\Device\Source\ARM\STM32F4xx_OTP.s
+      Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f429xx.s
+      Source file:   MDK\Device\Source\ARM\system_stm32f4xx.c
+</pre>
+</body>
+</html>
