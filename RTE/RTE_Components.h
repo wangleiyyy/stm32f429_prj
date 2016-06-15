@@ -4,12 +4,11 @@
  *      *** Do not modify ! ***
  *
  * Project: 'LED_REG' 
- * Target:  'Target 1' 
+ * Target:  'F429IGT' 
  */
 
 #ifndef RTE_COMPONENTS_H
 #define RTE_COMPONENTS_H
 
-#define RTE_DEVICE_STARTUP_STM32F4XX    /* Device Startup for STM32F4 */
 
 #endif /* RTE_COMPONENTS_H */
