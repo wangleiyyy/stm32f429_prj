@@ -10,8 +10,11 @@ void initial_led1(void)
 	gpio_initTypeDef.GPIO_OType = GPIO_OType_PP;
 	gpio_initTypeDef.GPIO_PuPd = GPIO_PuPd_UP;
 	gpio_initTypeDef.GPIO_Speed = GPIO_Speed_2MHz;
-	gpio_initTypeDef.GPIO_Pin = LED1_R_POART_PIN;
+	gpio_initTypeDef.GPIO_Pin = LED1_R_POART_PIN |LED1_G_POART_PIN |LED1_B_POART_PIN;
 	GPIO_Init(LED1_POART,&gpio_initTypeDef);
+	
+	
+	
 }
 void set_led1(uint16_t GPIO_Pin,LED1_STA newSta)
 {
