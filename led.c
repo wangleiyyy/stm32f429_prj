@@ -12,7 +12,7 @@ void initial_led1(void)
 	gpio_initTypeDef.GPIO_Speed = GPIO_Speed_2MHz;
 	gpio_initTypeDef.GPIO_Pin = LED1_R_POART_PIN |LED1_G_POART_PIN |LED1_B_POART_PIN;
 	GPIO_Init(LED1_POART,&gpio_initTypeDef);
-	
+	set_led1(LED1_G_POART_PIN|LED1_B_POART_PIN|LED1_R_POART_PIN,LED1_OFF);
 	
 	
 }
