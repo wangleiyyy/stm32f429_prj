@@ -29,6 +29,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f4xx_it.h"
+#include "led.h"
 //#include "main.h"
 
 /** @addtogroup Template_Project
@@ -156,9 +157,16 @@ void SysTick_Handler(void)
   * @param  None
   * @retval None
   */
-/*void PPP_IRQHandler(void)
+void KEY1_EXTI_IRQHandler(void)
 {
-}*/
+		set_led1(LED1_R_POART_PIN,LED1_ON);
+		set_led1(LED1_G_POART_PIN|LED1_B_POART_PIN,LED1_OFF);
+}
+void KEY2_EXTI_IRQHandler(void)
+{
+		set_led1(LED1_G_POART_PIN,LED1_ON);
+		set_led1(LED1_R_POART_PIN|LED1_B_POART_PIN,LED1_OFF);
+}
 
 /**
   * @}

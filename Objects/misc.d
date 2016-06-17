@@ -8,7 +8,9 @@
 .\objects\misc.o: .\CMSIS\Include\core_cmSimd.h
 .\objects\misc.o: .\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h
 .\objects\misc.o: ..\stm32f429_prj\stm32f4xx_conf.h
-.\objects\misc.o: .\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_gpio.h
+.\objects\misc.o: .\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_exti.h
 .\objects\misc.o: .\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+.\objects\misc.o: .\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_gpio.h
 .\objects\misc.o: .\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rcc.h
+.\objects\misc.o: .\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_syscfg.h
 .\objects\misc.o: .\STM32F4xx_StdPeriph_Driver\inc\misc.h
