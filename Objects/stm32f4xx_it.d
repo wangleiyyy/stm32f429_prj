@@ -14,4 +14,5 @@
 .\objects\stm32f4xx_it.o: .\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rcc.h
 .\objects\stm32f4xx_it.o: .\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_syscfg.h
 .\objects\stm32f4xx_it.o: .\STM32F4xx_StdPeriph_Driver\inc\misc.h
+.\objects\stm32f4xx_it.o: key.h
 .\objects\stm32f4xx_it.o: led.h
