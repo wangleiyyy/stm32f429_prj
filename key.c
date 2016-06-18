@@ -36,6 +36,7 @@ void KEY1_EXTI_Config(void)
 void KEY2_NVIC_Config(void)
 {
 	NVIC_InitTypeDef nvic_itdf;
+	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_1);
 	nvic_itdf.NVIC_IRQChannel = KEY2_EXTI_IRQn;
 	nvic_itdf.NVIC_IRQChannelPreemptionPriority = 1;
 	nvic_itdf.NVIC_IRQChannelSubPriority = 1;
@@ -46,8 +47,8 @@ void KEY2_EXTI_Config(void)
 {
 	EXTI_InitTypeDef exti_itdf;
 	initial_key(KEY2_POART,KEY2_PIN,KEY2_CLK);
-	RCC_APB2PeriphClockCmd(RCC_APB2RSTR_SYSCFGRST,ENABLE);
-	KEY1_NVIC_Config();
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_SYSCFG,ENABLE);
+	KEY2_NVIC_Config();
 	SYSCFG_EXTILineConfig(KEY2_EXTI_CFG_POARTSOURCE,KEY2_EXTI_CFG_PINSOURCE);
 	
 	exti_itdf.EXTI_Line = KEY2_EXTI_LINE;

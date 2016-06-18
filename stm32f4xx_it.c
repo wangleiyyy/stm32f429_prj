@@ -160,19 +160,22 @@ void SysTick_Handler(void)
   */
 void KEY1_EXTI_IRQHandler(void)
 {
-	//if(EXTI_GetITStatus(KEY1_EXTI_LINE) != RESET) 
-	
+	if(EXTI_GetITStatus(KEY1_EXTI_LINE) != RESET) 
+	{
 		set_led1(LED1_R_POART_PIN,LED1_ON);
 		set_led1(LED1_G_POART_PIN|LED1_B_POART_PIN,LED1_OFF);
-		//EXTI_ClearITPendingBit(KEY1_EXTI_LINE); 
-
+		EXTI_ClearITPendingBit(KEY1_EXTI_LINE); 
+	}
 }
 void KEY2_EXTI_IRQHandler(void)
 {
+	if(EXTI_GetITStatus(KEY2_EXTI_LINE) != RESET) 
+	{
 		set_led1(LED1_G_POART_PIN,LED1_ON);
 		set_led1(LED1_R_POART_PIN|LED1_B_POART_PIN,LED1_OFF);
+		EXTI_ClearITPendingBit(KEY2_EXTI_LINE); 
+	}
 }
-
 /**
   * @}
   */ 

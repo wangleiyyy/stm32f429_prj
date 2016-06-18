@@ -9,7 +9,7 @@ int main(void)
 //	initial_key(KEY1_POART,KEY1_PIN,KEY1_CLK);
 //	initial_key(KEY2_POART,KEY2_PIN,KEY2_CLK);
 	KEY1_EXTI_Config();
-	//KEY2_EXTI_Config();
+	KEY2_EXTI_Config();
 	
 	
 	
