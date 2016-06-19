@@ -12,7 +12,6 @@ void initial_key(GPIO_TypeDef* key_port, uint16_t key_pin,uint32_t key_clk)
 void KEY1_NVIC_Config(void)
 {
 	NVIC_InitTypeDef nvic_itdf;
-	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_1);
 	nvic_itdf.NVIC_IRQChannel = KEY1_EXTI_IRQn;
 	nvic_itdf.NVIC_IRQChannelPreemptionPriority = 1;
 	nvic_itdf.NVIC_IRQChannelSubPriority = 1;
@@ -36,7 +35,6 @@ void KEY1_EXTI_Config(void)
 void KEY2_NVIC_Config(void)
 {
 	NVIC_InitTypeDef nvic_itdf;
-	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_1);
 	nvic_itdf.NVIC_IRQChannel = KEY2_EXTI_IRQn;
 	nvic_itdf.NVIC_IRQChannelPreemptionPriority = 1;
 	nvic_itdf.NVIC_IRQChannelSubPriority = 1;

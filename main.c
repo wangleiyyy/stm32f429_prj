@@ -1,6 +1,7 @@
 #include "stm32f4xx.h"
 #include "led.h"
 #include "key.h"
+#include "systick.h"
 
 int main(void)
 {
@@ -8,8 +9,10 @@ int main(void)
 	initial_led1();
 //	initial_key(KEY1_POART,KEY1_PIN,KEY1_CLK);
 //	initial_key(KEY2_POART,KEY2_PIN,KEY2_CLK);
+	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_1);
 	KEY1_EXTI_Config();
 	KEY2_EXTI_Config();
+	SysTickInitial();
 	
 	
 	
