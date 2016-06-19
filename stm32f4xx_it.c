@@ -32,6 +32,7 @@
 #include "key.h"
 #include "led.h"
 #include "systick.h"
+#include "usb_uart.h"
 //#include "main.h"
 
 /** @addtogroup Template_Project
@@ -176,6 +177,15 @@ void KEY2_EXTI_IRQHandler(void)
 		set_led1(LED1_R_POART_PIN|LED1_B_POART_PIN,LED1_OFF);
 		EXTI_ClearITPendingBit(KEY2_EXTI_LINE); 
 	}
+}
+void USB_USART232_IRQHandler(void)
+{
+  uint8_t ucTemp;
+	if(USART_GetITStatus(USB_USART232,USART_IT_RXNE)!=RESET)
+	{		
+		ucTemp = USART_ReceiveData( USB_USART232 );
+    USART_SendData(USB_USART232,ucTemp);    
+	}	 
 }
 /**
   * @}
