@@ -452,6 +452,16 @@
               <FileType>1</FileType>
               <FilePath>.\usb_uart.c</FilePath>
             </File>
+            <File>
+              <FileName>e2prom.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\e2prom.c</FilePath>
+            </File>
+            <File>
+              <FileName>sdram.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\sdram.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -496,6 +506,16 @@
               <FileName>stm32f4xx_usart.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_usart.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_i2c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_i2c.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_fmc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_fmc.c</FilePath>
             </File>
           </Files>
         </Group>

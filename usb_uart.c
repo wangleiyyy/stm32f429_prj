@@ -57,4 +57,23 @@ void Usart_SendByte( USART_TypeDef * pUSARTx, uint8_t ch)
 	/* 等待发送数据寄存器为空 */
 	while (USART_GetFlagStatus(pUSARTx, USART_FLAG_TXE) == RESET);	
 }
+///重定向c库函数printf到串口，重定向后可使用printf函数
+int fputc(int ch, FILE *f)
+{
+		/* 发送一个字节数据到串口 */
+		USART_SendData(USB_USART232, (uint8_t) ch);
+		
+		/* 等待发送完毕 */
+		while (USART_GetFlagStatus(USB_USART232, USART_FLAG_TXE) == RESET);		
+	
+		return (ch);
+}
 
+///重定向c库函数scanf到串口，重写向后可使用scanf、getchar等函数
+int fgetc(FILE *f)
+{
+		/* 等待串口输入数据 */
+		while (USART_GetFlagStatus(USB_USART232, USART_FLAG_RXNE) == RESET);
+
+		return (int)USART_ReceiveData(USB_USART232);
+}

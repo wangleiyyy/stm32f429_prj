@@ -1,6 +1,7 @@
 #ifndef BH_BOARD_USB_UART
 #define BH_BOARD_USB_UART
 #include "stm32f4xx.h"
+#include "stdio.h"
 
 #define USB_USART232 								USART1
 #define USB_USART232_CLK 						RCC_APB2Periph_USART1
@@ -24,7 +25,8 @@
 
 void USB_USART232_Initial(void);
 void Usart_SendByte( USART_TypeDef * pUSARTx, uint8_t ch);
-
+int fputc(int ch, FILE *f);
+int fgetc(FILE *f);
 
 
 #endif
